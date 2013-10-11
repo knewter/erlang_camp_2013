@@ -1,12 +1,12 @@
 {application, simple_cache,
  [
-  {description, ""},
+  {description, "Simple KV Store"},
   {vsn, "1"},
   {registered, []},
   {applications, [
                   kernel,
                   stdlib
                  ]},
-  {mod, { simple_cache_app, []}},
+  {mod, { sc_app, []}},
   {env, []}
  ]}.
