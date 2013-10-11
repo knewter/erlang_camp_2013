@@ -1,0 +1,12 @@
+{application, ec_behaviours_and_applications,
+ [
+  {description, "Erlang Camp Behaviours and Applications"},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { simple_cache, []}},
+  {env, []}
+ ]}.
