@@ -9,8 +9,10 @@
 -spec op(add | sub, number(), number()) -> number().
 op(add, A, B) ->
     A + B;
+op(sub, A, B) when A >= B ->
+    A - B;
 op(sub, A, B) ->
-    A - B.
+    error.
 
 -ifdef(TEST).
 -include_lib("eunit/include/eunit.hrl").
@@ -24,4 +26,7 @@ op_can_add_test() ->
 
 op_can_sub_test() ->
     ?assertEqual(0, op(sub, 2, 2)).
+
+op_errors_when_sub_negative_test() ->
+    ?assertEqual(error, op(sub, 2, 3)).
 -endif.
