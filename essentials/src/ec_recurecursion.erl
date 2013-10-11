@@ -38,10 +38,10 @@ loop_test() ->
     ?assertEqual(ok, loop(3)).
 
 sum_seq_test() ->
-    ?assertEqual(sum_seq(0), 0),
-    ?assertEqual(sum_seq(3), 6).
+    ?assertEqual(0, sum_seq(0)),
+    ?assertEqual(6, sum_seq(3)).
 
 hr_test() ->
-    ?assertEqual(hr(3), "---"),
-    ?assertEqual(hr(6), "------").
+    ?assertEqual("---", hr(3)),
+    ?assertEqual("------", hr(6)).
 -endif.
