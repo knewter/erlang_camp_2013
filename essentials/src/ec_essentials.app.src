@@ -7,6 +7,6 @@
                   kernel,
                   stdlib
                  ]},
-  {mod, { ec_add, ec_multiply, []}},
+  {mod, { ec_add, ec_multiply, ec_match, []}},
   {env, []}
  ]}.
