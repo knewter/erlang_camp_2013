@@ -1,3 +1,3 @@
 # Erlang Camp 2013 Notes
 
-## The Shell
+- [Erlang Essentials](essentials/README.md)
