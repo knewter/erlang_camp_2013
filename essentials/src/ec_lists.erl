@@ -3,7 +3,7 @@
 %%% @copyright 2013 PUBLIC DOMAIN GEEBUS
 
 -module(ec_lists).
--export([remove_odd/1, twomult/1]).
+-export([remove_odd/1, twomult/1, yourmap/2]).
 
 %% @doc remove odd elements form a list of integers
 -spec remove_odd(list()) -> list().
@@ -28,6 +28,16 @@ twomult([], Acc) -> Acc;
 twomult([H|T], Acc) ->
     twomult(T, Acc ++ [2*H]).
 
+%% @doc apply a fun() to every list element
+-spec yourmap(fun(), list()) -> list().
+yourmap(Fun, List) ->
+    yourmap(Fun, List, []).
+
+-spec yourmap(fun(), list(), list()) -> list().
+yourmap(_Fun, [], Acc) -> Acc;
+yourmap(Fun, [H|T], Acc) ->
+    yourmap(Fun, T, Acc ++ [Fun(H)]).
+
 -ifdef(TEST).
 -include_lib("eunit/include/eunit.hrl").
 
@@ -41,4 +51,7 @@ remove_odd_test() ->
 
 twomult_test() ->
     ?assertEqual([2,4], twomult([1,2])).
+
+yourmap_test() ->
+    ?assertEqual([2, 4], yourmap(fun(X) -> 2*X end, [1,2])).
 -endif.
