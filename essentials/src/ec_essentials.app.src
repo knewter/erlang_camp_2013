@@ -1,0 +1,12 @@
+{application, ec_essentials,
+ [
+  {description, "Erlang Camp Essentials"},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { ec_add, ec_multiply, []}},
+  {env, []}
+ ]}.
