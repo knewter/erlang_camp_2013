@@ -21,6 +21,7 @@ sum_seq(N) -> N + sum_seq(N - 1).
 -spec hr(integer()) -> string().
 hr(N) ->
     hr(N, []).
+-spec hr(integer(), string()) -> string().
 hr(0, Accum) ->
     Accum;
 hr(N, Accum) ->
