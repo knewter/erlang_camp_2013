@@ -6,13 +6,13 @@
 -export([op/3]).
 
 %% @doc handles addition and subtraction ops
--spec op(add | sub, number(), number()) -> number().
+-spec op(add | sub, number(), number()) -> number() | error.
 op(add, A, B) ->
     A + B;
-op(sub, A, B) when A >= B ->
-    A - B;
+op(sub, A, B) when A < B ->
+    error;
 op(sub, A, B) ->
-    error.
+    A - B.
 
 -ifdef(TEST).
 -include_lib("eunit/include/eunit.hrl").
