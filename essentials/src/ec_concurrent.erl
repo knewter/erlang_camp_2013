@@ -9,10 +9,11 @@
 bf_seq(List) ->
     RL = lists:reverse(List),
     spawn(fun() -> print_seq(List) end),
-    spawn(fun() -> print_seq(RL) end).
+    spawn(fun() -> print_seq(RL) end),
+    ponies.
 
 print_seq([H]) ->
     io:format("~p", [H]);
 print_seq([H|T]) ->
-    io:format("~p", [H]),
+    io:format("~p,", [H]),
     print_seq(T).
