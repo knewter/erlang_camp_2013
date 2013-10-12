@@ -35,10 +35,11 @@
 - have that process send you back its Pid
 - receive that message out of the shell's mailbox
 
-    37> New = spawn(fun() -> receive Shell -> Shell ! self() end end).
+    37> Pid = spawn(fun() -> receive Shell -> Shell ! {echo, self()} end end).
     <0.78.0>
-    38> New ! self().
+    38> Pid ! self().
     <0.33.0>
-    39> flush().
-    Shell got <0.78.0>
-    ok
+    39> receive Pid -> Pid after 0 -> nope end.
+    nope
+    40> receive {echo, Pid} -> Pid after 0 -> nope end.
+    <0.33.0>
