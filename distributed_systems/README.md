@@ -75,4 +75,45 @@ machine.
 - Remote process communication
   - `Pid ! message`
 
+#### Running nodes and chatting on a network
 
+In two different shells:
+
+```bash
+erl -name a  # Fully qualified domain name
+erl -sname b # non fully qualified name
+```
+
+That will spin up two named erlang shells.  One is on the local machine, one is
+on the network (a is network, b is local).
+
+Then from a:
+
+```erlang
+net_adm:ping(b@network).
+```
+
+You'll get a pong back from b.
+
+#### EPMD Port Mapper Daemon
+This process maps node names to the ports they listen to.  There is one per
+machine.  Listens on port 4369.
+
+```erlang
+```
+
+#### Connecting to other nodes
+
+Start nodes a and b.
+
+In a:
+
+- `net_adm:ping(b@jibbajabba).`
+- ^G - This will open 'User switch command'
+- ? - This will yield help
+- r b@jibbajabba - start remote shell
+- j - list jobs
+- c - connect to a job
+
+Now you're on the b node, connected from the shell you started from the a node
+:)
