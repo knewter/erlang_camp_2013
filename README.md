@@ -4,3 +4,4 @@
 - [Behaviours and Applications](behaviours_and_applications/README.md)
 - [Distributed Systems](distributed_systems/README.md)
 - [Testing](testing/README.md)
+- [Releases](releases/README.md)

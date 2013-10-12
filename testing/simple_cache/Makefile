@@ -46,7 +46,6 @@ all: compile test
 compile:
 	$(REBAR) skip_deps=true compile
 
-
 doc:
 	$(REBAR) skip_deps=true doc
 

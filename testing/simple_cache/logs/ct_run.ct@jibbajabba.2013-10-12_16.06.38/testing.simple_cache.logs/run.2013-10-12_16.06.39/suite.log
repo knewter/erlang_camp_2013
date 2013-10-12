@@ -1,0 +1,36 @@
+=== Suite started at 2013-10-12 16:06:39
+=== Starting test, 1 test cases
+=cases         1
+=user          jadams
+=host          jibbajabba
+=hosts         jibbajabba 
+=emulator_vsn  5.10.3
+=emulator      beam
+=otp_release   R16B02
+=started       2013-10-12 16:06:39
+=case          simple_cache_SUITE:init_per_suite
+=logfile       simple_cache_suite.init_per_suite.html
+=started       2013-10-12 16:06:39
+=ended         2013-10-12 16:06:39
+=result        ok
+=elapsed       0.011847
+=case          simple_cache_SUITE:my_test_case
+=logfile       simple_cache_suite.my_test_case.html
+=started       2013-10-12 16:06:39
+=ended         2013-10-12 16:06:39
+=result        ok
+=elapsed       0.002266
+=case          simple_cache_SUITE:end_per_suite
+=logfile       simple_cache_suite.end_per_suite.html
+=started       2013-10-12 16:06:39
+=ended         2013-10-12 16:06:39
+=result        ok
+=elapsed       2.0e-6
+=group_time    0.102s
+=== TEST COMPLETE, 1 ok, 0 failed of 1 test cases
+
+=finished      2013-10-12 16:06:39
+=failed        0
+=successful    1
+=user_skipped  0
+=auto_skipped  0
