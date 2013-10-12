@@ -64,3 +64,15 @@
     Shell got <0.43.0>
     Shell got <0.41.0>
     ok
+
+### Location Transparency
+
+Syntax is the same whether talking to a local process or one that is on another
+machine.
+
+- Local process communication
+  - `Pid ! message`
+- Remote process communication
+  - `Pid ! message`
+
+
