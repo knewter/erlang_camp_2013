@@ -128,3 +128,10 @@ Keep these in mind as you code:
 - There is one administrator
 - Transport cost is zero
 - Network is homogenous
+
+#### Healthy Properties
+These properties are present in the most sound of distributed systems.
+
+- Peer Based - No leader, masters, special nodes or central services
+- Asynchronous - Resilient, expect failure, simple, loosely coupled
+- Easy to debug - Easy to interrogate, easy to determine state
