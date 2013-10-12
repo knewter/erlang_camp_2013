@@ -46,8 +46,8 @@
 
 - Chain some stuff :)
 
-    5> Fun = 
-    5>   fun() -> 
+    5> Fun =
+    5>   fun() ->
     5>     receive From -> From ! self() end
     5>   end.
     #Fun<erl_eval.20.80484245>
