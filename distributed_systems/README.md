@@ -132,3 +132,17 @@ These properties are present in the most sound of distributed systems.
 - Peer Based - No leader, masters, special nodes or central services
 - Asynchronous - Resilient, expect failure, simple, loosely coupled
 - Easy to debug - Easy to interrogate, easy to determine state
+
+#### Sick Systems
+The properties here can indicate a distributed system particularly vulnerable to
+failure
+
+- Not peer based - masters, central systems, special nodes, shared state, shared
+  clock time.
+- Synchronous communication
+  - transaction oriented systems
+- Synchronous - reliant on time constraints
+- Hard to debug
+  - Opaque
+  - Migrating processes
+  - Monolithic
