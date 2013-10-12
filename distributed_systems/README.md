@@ -99,9 +99,6 @@ You'll get a pong back from b.
 This process maps node names to the ports they listen to.  There is one per
 machine.  Listens on port 4369.
 
-```erlang
-```
-
 #### Connecting to other nodes
 
 Start nodes a and b.
