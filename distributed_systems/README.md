@@ -28,3 +28,17 @@
     <0.70.0>
     34> receive Pid -> Pid after 0 -> nope end.
     nope
+
+### Try this!
+- spawn a process
+- send that process a message containing the Pid of the shell
+- have that process send you back its Pid
+- receive that message out of the shell's mailbox
+
+    37> New = spawn(fun() -> receive Shell -> Shell ! self() end end).
+    <0.78.0>
+    38> New ! self().
+    <0.33.0>
+    39> flush().
+    Shell got <0.78.0>
+    ok
