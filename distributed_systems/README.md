@@ -117,3 +117,14 @@ In a:
 
 Now you're on the b node, connected from the shell you started from the a node
 :)
+
+#### 8 Fallacies of Distributed Computing
+Keep these in mind as you code:
+
+- Network is reliable
+- Latency is zero
+- Bandwidth is infinite
+- Topology does not change
+- There is one administrator
+- Transport cost is zero
+- Network is homogenous
