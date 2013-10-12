@@ -43,3 +43,24 @@
     nope
     40> receive {echo, Pid} -> Pid after 0 -> nope end.
     <0.33.0>
+
+- Chain some stuff :)
+
+    5> Fun = 
+    5>   fun() -> 
+    5>     receive From -> From ! self() end
+    5>   end.
+    #Fun<erl_eval.20.80484245>
+    6> Pid1 = spawn(Fun).
+    <0.41.0>
+    7> Pid2 = spawn(Fun).
+    <0.43.0>
+    8> Pid3 = spawn(Fun).
+    <0.45.0>
+    9> Pid1 ! Pid2 ! Pid3 ! self().
+    <0.33.0>
+    10> flush().
+    Shell got <0.45.0>
+    Shell got <0.43.0>
+    Shell got <0.41.0>
+    ok
